@@ -1,4 +1,3 @@
-
 $(function () {
   setupDropZone();
   setupSubmit();
@@ -64,7 +63,7 @@ function setupSubmit() {
             if (top) {
               const reader = new FileReader();
               reader.onload = function (e) {
-                const imgHTML = `<img src="${e.target.result}" style="max-width:100%; margin-top:0.5rem" alt="${file.name}"/>`;
+                const imgHTML = `<img src="${e.target.result}" class="result-image" alt="${file.name}"/>`;
                 $("#output").append(`
                   <div style="margin-bottom: 2rem;">
                     <h4>${file.name}</h4>
