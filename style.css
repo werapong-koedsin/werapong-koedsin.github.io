@@ -10,13 +10,28 @@ body {
   text-align: center;
   margin-bottom: 1rem;
 }
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 .logo {
-  width: 60px;
-  height: auto;
+  height: 60px;
+  object-fit: contain;
 }
 .site-title {
   font-size: 1.5rem;
   margin: 0.5rem 0;
+}
+.lang-toggle button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: #606fc7;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 .input__label {
   font-weight: 600;
@@ -44,6 +59,11 @@ body {
 }
 .result {
   margin-top: 2rem;
+}
+.notice {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 1rem;
 }
 .headline {
   font-size: 1.25rem;

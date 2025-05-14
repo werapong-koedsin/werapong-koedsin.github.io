@@ -3,34 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nail Disease Classifier</title>
+  <title>Early Detection Nail Diseases - PSU</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/TSU_Sub-Logo.svg" alt="TSU Logo" class="logo">
-    <h1 class="site-title">Early detection nail diseases</h1>
+    <div class="logo-wrapper">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/TSU_Sub-Logo.svg" alt="TSU Logo" class="logo">
+      <img src="https://sciusforum15.ubu.ac.th/assets/img/acad/2.png" alt="SCIUS Logo" class="logo">
+    </div>
+    <h1 class="site-title" data-lang="title">Early Detection Nail Diseases</h1>
+    <div class="lang-toggle">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('th')">TH</button>
+    </div>
   </header>
   <form id="inputForm">
     <div class="content">
       <div class="content__grid">
         <div class="col-12">
-          <label class="input__label">Drop or Select Image(s)</label>
+          <label class="input__label" data-lang="upload">Drop or Select Image(s)</label>
           <div id="dropZone" class="dropzone">
-            <p>Drag and drop image files here or tap to select.</p>
+            <p data-lang="dropzone">Drag and drop image files here or tap to select.</p>
             <input type="file" id="file" multiple accept="image/*" style="display: none;" />
           </div>
           <div id="uploadStatus" style="margin-top: 1rem;"></div>
         </div>
         <div class="col-12">
-          <button type="submit" class="bttn__primary">Run Inference</button>
+          <button type="submit" class="bttn__primary" data-lang="run">Run</button>
         </div>
+      </div>
+      <div class="notice">
+        <p data-lang="notice">
+          <strong>Note:</strong> This system is for preliminary screening only and may have inaccuracies. A proper diagnosis should be made by a qualified medical professional.
+        </p>
       </div>
       <div class="result" id="resultContainer" style="display:none;">
         <div class="divider"></div>
         <div class="result__header">
-          <h3 class="headline">Results</h3>
+          <h3 class="headline" data-lang="resultHeader">Results</h3>
         </div>
         <div id="output" class="codeblock"></div>
       </div>
